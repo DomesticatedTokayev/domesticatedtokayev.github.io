@@ -1,0 +1,237 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap');
+
+
+/* || RESET ---------------------------------------------------------------------------------------*/
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* || VARIABLES -----------------------------------------------------------------------------------*/
+:root{
+    /* FONTS */
+    --FONT_FAMILY: "Merriweather", serif;
+    /* FONT SIZES */
+
+    /* COLORS */
+
+    /* STANDARD BORDERS */
+    --STANDARD_PADDING: 10px 10px;
+    /* STANDARD BORDERS */
+
+    /* STANDARD MARGINS */
+}
+
+/* || UTILITY CLASSES  ----------------------------------------------------------------------------*/
+.no-wrap{
+    text-wrap: nowrap;
+}
+
+.hidden{
+    display: none;
+}
+
+/* || GENERAL STYLES  -----------------------------------------------------------------------------*/
+html{
+
+}
+
+body{
+
+}
+
+main{
+    background: lightcyan;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    background: grey;
+    min-height: 100px;
+}
+
+footer{
+    background: grey;
+    min-height: 100px;
+}
+
+a{
+
+}
+
+a:hover, a:focus-visible{
+
+}
+
+/* || CUSTOM STYLES  ------------------------------------------------------------------------------*/
+
+/* || MAIN  ---------------------------------------------------------------------------------------*/
+
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: var(--STANDARD_PADDING);
+
+}
+
+.section{
+    background-color: red;
+
+}
+
+.section:nth-child(odd){
+    background: yellow;
+}
+
+/* || VECTICAL-NAVIGATION -------------------------------------------------------------------------*/
+.sidebar{
+    min-width: 70%;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    background: green;
+    overflow-y: hidden;
+    transform: 0.5s;
+}
+
+/* || ABOUT  --------------------------------------------------------------------------------------*/
+.about{
+    min-height: 400px;
+}
+/* || SKILLS  -------------------------------------------------------------------------------------*/
+.skills{
+    min-height: 800px;
+}
+/* || PROJECTS  -----------------------------------------------------------------------------------*/
+.projects{
+    /* min-height: 1200px; */
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: start;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.card{
+    background: green;
+    width: 30%;
+    height: clamp(100px, 23vw, 300px);
+
+}
+
+.description{
+    background: blue;
+    display: none;
+    width: 90%;
+    height: 400px;
+    opacity: 1;
+    order: 1;
+    overflow: scroll;
+    overflow-y: auto;
+}
+
+.screen_view{
+    display: block;
+    position:fixed;
+    width:100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    /* overflow: scroll;
+    overflow-y: auto; */
+}
+
+.show{
+    display: block;
+}
+
+.dropdown{
+    position: relative;
+    animation-name: down;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.up{
+    position: relative;
+    animation-name: up;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes down{
+    0% {height: 0px;}
+    100% {height: 400px;}
+}
+
+@keyframes up{
+    0% {height: 400px;}
+    99% {height: 0px; }
+    100% {display: none; }
+}
+
+.card:nth-child(1), .card:nth-child(2), .card:nth-child(3){
+    order: 0;
+}
+
+.card:nth-child(4), .card:nth-child(5), .card:nth-child(6){
+    order: 2;
+}
+
+/* || CONTACT  ------------------------------------------------------------------------------------*/
+.contact{
+    min-height: 300px;
+}
+
+/* || MEDIA  --------------------------------------------------------------------------------------*/
+/* || VERY SMALL */
+@media screen and (max-width: 380px){
+
+}
+
+/* || SMALL */
+@media screen and (max-width: 576px){
+    .cards{
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .card{
+        /* height: 300px; */
+        height: 60vw;
+        width: 80%;
+    }
+}
+
+/* || MEDIUM */
+@media screen and (max-width: 846px){
+
+}
+
+/* || LARGE */
+@media screen and (max-width: 992px){
+
+}
+
+/* || XL */
+@media screen and (max-width: 1200px){
+
+}
