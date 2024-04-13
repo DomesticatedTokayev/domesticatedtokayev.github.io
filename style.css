@@ -25,6 +25,8 @@ img{
 
     /* STANDARD BORDERS */
     --STANDARD_PADDING: 10px 10px;
+    --STANDARD_VER_PADDING: 20px 0;
+    --STANDARD_HOR_PADDING: 0px 10px;
     /* STANDARD BORDERS */
 
     /* STANDARD MARGINS */
@@ -37,6 +39,10 @@ img{
 
 .hidden{
     display: none;
+}
+
+.center{
+    text-align: center;
 }
 
 /* || GENERAL STYLES  -----------------------------------------------------------------------------*/
@@ -53,11 +59,23 @@ main{
     min-height: 100vh;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 60px;
+    /* scroll-margin-top: 60px; */
 }
 
 header{
     background: grey;
-    min-height: 100px;
+    height: 70px;
+
+    position: fixed;
+    top:0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--STANDARD_PADDING);
+    
 }
 
 footer{
@@ -73,15 +91,49 @@ a:hover, a:focus-visible{
 
 }
 
+h1, h2, h3, h4{
+    margin-bottom: 20px;
+}
+
+h1{
+    font-size: clamp(3.2rem, 5.5vw, 4.8rem);
+}
+
+h2{
+    font-size: clamp(2.5rem, 5.3vw, 3.0rem);
+}
+
+h3{
+    font-size: clamp(1.2rem, 5.2vw, 1.8rem);
+}
+
+h4{
+
+}
+
 /* || CUSTOM STYLES  ------------------------------------------------------------------------------*/
+
+/* || HEADER  -------------------------------------------------------------------------------------*/
+.shown{
+    display: block;
+}
+
+.header-button{
+    display: none;
+}
+
+.nav-button{
+    min-width: 50px;
+    min-height: 50px;
+}
 
 /* || MAIN  ---------------------------------------------------------------------------------------*/
 
 .main{
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: var(--STANDARD_PADDING);
+    /* gap: 10px; */
+    padding: var(--STANDARD_HOR_PADDING);
 
 }
 
@@ -109,15 +161,20 @@ a:hover, a:focus-visible{
 
 /* || ABOUT  --------------------------------------------------------------------------------------*/
 .about{
+    padding: var(--STANDARD_VER_PADDING);
     min-height: 400px;
+    scroll-margin-top: 60px;
 }
 /* || SKILLS  -------------------------------------------------------------------------------------*/
 .skills{
-    min-height: 800px;
+    padding: var(--STANDARD_VER_PADDING);
+    scroll-margin-top: 60px;
 }
 /* || PROJECTS  -----------------------------------------------------------------------------------*/
 .projects{
+    padding: var(--STANDARD_VER_PADDING);
     /* min-height: 1200px; */
+    scroll-margin-top: 60px;
 }
 
 .cards{
@@ -209,6 +266,11 @@ a:hover, a:focus-visible{
 
 /* || SMALL */
 @media screen and (max-width: 576px){
+   
+}
+
+/* || MEDIUM */
+@media screen and (max-width: 846px){
     .cards{
         flex-direction: column;
         align-content: center;
@@ -219,11 +281,18 @@ a:hover, a:focus-visible{
         height: 60vw;
         width: 80%;
     }
-}
 
-/* || MEDIUM */
-@media screen and (max-width: 846px){
+    header{
+        justify-content: end;
+    }
 
+    .shown{
+        display: none;
+    }
+
+    .header-button{
+        display: block;
+    }
 }
 
 /* || LARGE */

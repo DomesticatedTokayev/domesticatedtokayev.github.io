@@ -27,11 +27,11 @@ function closeNavMenu() {
 
 // Project cards
 let descCardOpen = false;
-let card = document.getElementsByClassName("card");
+let selectableCard = document.getElementsByClassName("selectable");
 let cardDescription = document.getElementById("description");
-for (let i = 0; i < card.length; i++)
+for (let i = 0; i < selectableCard.length; i++)
 {
-    card[i].addEventListener("click", function () {
+    selectableCard[i].addEventListener("click", function () {
 
         // Check resolution, and open different description window when using small width screen
         if (window.innerWidth <= 576){
@@ -43,7 +43,7 @@ for (let i = 0; i < card.length; i++)
             descCardOpen = true;
         }
         else {
-            let currOrder = getComputedStyle(card[i]).order;
+            let currOrder = getComputedStyle(selectableCard[i]).order;
             cardDescription.style.setProperty("order", currOrder + 1)
             cardDescription.classList.add("show");
             cardDescription.classList.remove("up");
