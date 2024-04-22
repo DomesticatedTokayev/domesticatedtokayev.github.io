@@ -17,14 +17,16 @@
             </div>
         </div>
         <div class="vertical-navigation header-button">
-            <button class="nav-button" onclick="openNavMenu()">|||</button>
+            <button class="button nav-button" onclick="openNavMenu()">|||</button>
         </div>
         <div class="sidebar hidden" id="sidebar"> 
-            <button class="sidebar__close" onclick="closeNavMenu()">X</button>
-            <a href="#about" aria-label="home">Home</a>
-            <a href="#skills" aria-label="skills">Skills</a>
-            <a href="#projects" aria-label="projects">Projects</a>
-            <a href="#contact" aria-label="contact">Contact</a>
+            <button class="sidebar__close button" onclick="closeNavMenu()">X</button>
+            <div class="sidebar__links">
+                <a href="#about" aria-label="home">Home</a>
+                <a href="#skills" aria-label="skills">Skills</a>
+                <a href="#projects" aria-label="projects">Projects</a>
+                <a href="#contact" aria-label="contact">Contact</a>
+            </div>
         </div>
     </header>
 
@@ -36,40 +38,40 @@
         <section class="section skills" id="skills">
             <h2 class="center">skills</h2>
             <section class="cards">
-                <div class="card selectable"></div>
-                <div class="card selectable"></div>
-                <div class="card selectable"></div>
-                <div class="card selectable"></div>
-                <div class="card selectable"></div>
-                <div class="card selectable"></div>
+                <div class="card skill"></div>
+                <div class="card skill"></div>
+                <div class="card skill"></div>
+                <div class="card skill"></div>
+                <div class="card skill"></div>
+                <div class="card skill"></div>
             </section>
         </section>
         <section class="section projects" id="projects">
             <h2 class="center">projects</h2>
             <section class="cards">
-                <div class="card selectable">
-              
+                <div class="card selectable project">
+    
                 </div>
-                <div class="card selectable">
+                <div class="card selectable project">
 
                 </div>
-                <div class="card selectable">
+                <div class="card selectable project">
 
                 </div>
-                <div class="card selectable">
+                <div class="card selectable project">
 
                 </div>
-                <div class="card selectable">
+                <div class="card selectable project">
          
                 </div>
                 <div class="description" id="description">
-                    <button class="card__close" onclick="closeDescCard()">X</button>
+                    <button class="card__close button" onclick="closeDescCard()">X</button>
    
                 </div>
             </section>
         </section>
         <section class="section contact" id="contact">
-            <h2 class="center">contact</h2>
+            <h2 class="center">Contact Details</h2>
         </section>
     </main>
 

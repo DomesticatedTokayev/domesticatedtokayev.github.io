@@ -22,6 +22,14 @@ img{
     /* FONT SIZES */
 
     /* COLORS */
+    /* #222823 */
+    --HEADER_BG_COLOR: #2d2d2d;
+    --BODY_BG_COLOR: rgb(70, 69, 69);
+    --MAIN_BG_COLOR: #242424;
+    --SKILL_BG_COLOR: #4e4e4e;
+    --PROJECT_BG_COLOR: #4e4e4e;
+    --PROJECT_DESC_BG_COLOR: #3e3e3e;
+    --SIDEBAD_BG_COLOR: #2d2d2d;
 
     /* STANDARD BORDERS */
     --STANDARD_PADDING: 10px 10px;
@@ -51,11 +59,11 @@ html{
 }
 
 body{
-
+    background-color: var(--BODY_BG_COLOR);
 }
 
 main{
-    background: lightcyan;
+    background: var(--MAIN_BG_COLOR);
     min-height: 100vh;
     max-width: 1200px;
     margin: 0 auto;
@@ -64,7 +72,7 @@ main{
 }
 
 header{
-    background: grey;
+    background: var(--HEADER_BG_COLOR);
     height: 70px;
 
     position: fixed;
@@ -74,25 +82,31 @@ header{
     justify-content: center;
     align-items: center;
 
+    box-shadow: 1px 1px 7px black;
+
     padding: var(--STANDARD_PADDING);
     
 }
 
 footer{
-    background: grey;
+    background: var(--HEADER_BG_COLOR);
     min-height: 100px;
 }
 
 a{
-
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover, a:focus-visible{
-
+    text-decoration: underline;
 }
 
 h1, h2, h3, h4{
     margin-bottom: 20px;
+    color: white;
 }
 
 h1{
@@ -115,14 +129,15 @@ h4{
 
 /* || HEADER  -------------------------------------------------------------------------------------*/
 .shown{
-    display: block;
+    display: flex;
+    gap: 20px;
 }
 
 .header-button{
     display: none;
 }
 
-.nav-button{
+.button{
     min-width: 50px;
     min-height: 50px;
 }
@@ -138,12 +153,12 @@ h4{
 }
 
 .section{
-    background-color: red;
+    /* background-color: hwb(0 100% 0% / 0.3); */
 
 }
 
 .section:nth-child(odd){
-    background: yellow;
+    /* background: hwb(0 23% 77% / 0.3); */
 }
 
 /* || VECTICAL-NAVIGATION -------------------------------------------------------------------------*/
@@ -151,12 +166,22 @@ h4{
     min-width: 70%;
     min-height: 100vh;
     position: fixed;
-    z-index: 10;
+    z-index: 1;
     top: 0;
     right: 0;
-    background: green;
+    background: var(--SIDEBAD_BG_COLOR);
     overflow-y: hidden;
     transform: 0.5s;
+    padding: 10px;
+
+    box-shadow: 1px 1px 7px black;
+}
+
+.sidebar__links{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 10px;
 }
 
 /* || ABOUT  --------------------------------------------------------------------------------------*/
@@ -170,11 +195,21 @@ h4{
     padding: var(--STANDARD_VER_PADDING);
     scroll-margin-top: 60px;
 }
+
+.skill{
+    background: var(--SKILL_BG_COLOR);
+}
 /* || PROJECTS  -----------------------------------------------------------------------------------*/
 .projects{
     padding: var(--STANDARD_VER_PADDING);
     /* min-height: 1200px; */
     scroll-margin-top: 60px;
+}
+
+.project{
+    background: var(--PROJECT_BG_COLOR);
+    /* box-shadow: 5px 5px 5px #636363; */
+    border: 3px solid #7c7c7c;
 }
 
 .cards{
@@ -188,14 +223,13 @@ h4{
 }
 
 .card{
-    background: green;
     width: 30%;
     height: clamp(100px, 23vw, 300px);
 
 }
 
 .description{
-    background: blue;
+    background: var(--PROJECT_DESC_BG_COLOR);
     display: none;
     width: 90%;
     height: 400px;
@@ -203,6 +237,12 @@ h4{
     order: 1;
     overflow: scroll;
     overflow-y: auto;
+    /* box-shadow: 5px 5px 5px ; */
+    overflow-x: hidden;
+
+    /* box-shadow: 5px 5px 5px #636363; */
+
+    
 }
 
 .screen_view{

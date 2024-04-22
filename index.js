@@ -34,7 +34,7 @@ for (let i = 0; i < selectableCard.length; i++)
     selectableCard[i].addEventListener("click", function () {
 
         // Check resolution, and open different description window when using small width screen
-        if (window.innerWidth <= 576){
+        if (window.innerWidth <= 846){
             // Remove classses, if previously a different screen size was used
             cardDescription.classList.remove("up");
             cardDescription.classList.remove("dropdown");
@@ -57,7 +57,7 @@ for (let i = 0; i < selectableCard.length; i++)
 // Close description 
 function closeDescCard() {
     if (descCardOpen) {
-        if (window.innerWidth <= 576) {
+        if (window.innerWidth <= 846) {
             cardDescription.classList.remove("screen_view");
         } else {
             cardDescription.classList.remove("dropdown");
