@@ -234,10 +234,55 @@ h4{
 }
 
 .project{
+    width: 100%;
+    max-width: 93%;
     background: var(--PROJECT_BG_COLOR);
+    /* background: red; */
     /* box-shadow: 5px 5px 5px #636363; */
-    border: 3px solid #7c7c7c;
+    /* border: 3px solid #7c7c7c; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: var(--STANDARD_PADDING);
 }
+
+.project img{
+    max-width: 70%;
+    padding-bottom: 20px;
+}
+
+.video-container{
+    position: relative;
+    overflow: hidden;
+    width: 70%;
+}
+
+.video-container::after{
+    display: block;
+    content: "";
+    padding-top: 56.25%; /*16:9 aspect ration*/
+}
+
+.video-container iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 5.6 */
+/* 3.15 */
+iframe{
+    /* width: calc((560px / 100) * 110); */
+    /* height:  calc((315px / 100) * 110); */
+    /* width: 560px; */
+    /* height: 315px; */
+    padding-bottom: 15px;
+}
+
 
 .cards{
     display: flex;
@@ -265,17 +310,10 @@ h4{
     gap: 10px;
 }
 
-.card__title {
-    /* min-height: clamp(40px, 5.0vw, 65px); */
-}
 
 .skills img{
     /* max-height: 70px; */
     height: 5em;
-}
-
-.card .card__down{
-    
 }
 
 .description{
@@ -295,7 +333,6 @@ h4{
     overscroll-behavior: contain;
 
     /* box-shadow: 5px 5px 5px #636363; */
-    
 }
 
 .card__close{
@@ -317,10 +354,6 @@ h4{
     padding-bottom: 15px;
 }
 
-iframe{
-    width: 100%;
-    height: 100%;
-}
 
 .screen_view{
     display: flex;
@@ -380,22 +413,18 @@ iframe{
 
 
 
-
-
-
-
 /* || MEDIUM */
 @media screen and (max-width: 846px){
-    .cards{
+     .cards{
         flex-direction: column;
         align-content: center;
-    }
+    } 
 
     .card{
-        /* height: 300px; */
-        height: auto;
-        width: 70%;
-    }
+        height: 300px; 
+        height: auto; 
+        width: 70%; 
+    }  
 
     header{
         justify-content: end;
@@ -409,29 +438,29 @@ iframe{
         display: flex;
     }
 
-    .project__content{
+    /* .project__content{
 
         width: calc((560px / 100) * 90);
         height:  calc((315px / 100) * 90);
         padding-bottom: 15px;
-    }
+    } */
 }
 
 /* || SMALL */
 @media screen and (max-width: 576px){
-    .project__content{
+    /* .project__content{
         width: calc((560px / 100) * 70);
         height:  calc((315px / 100) * 70);
-    }
+    } */
 }
 
 /* || VERY SMALL */
 @media screen and (max-width: 380px){
 
-    .project__content{
+    /* .project__content{
         width: calc((560px / 100) * 50);
         height:  calc((315px / 100) * 50);
-    }
+    } */
 }
 
 
