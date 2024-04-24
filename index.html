@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <header>
@@ -20,8 +21,9 @@
             <button class="button nav-button" onclick="openNavMenu()">|||</button>
         </div>
         <div class="sidebar hidden" id="sidebar"> 
-            <button class="sidebar__close button" onclick="closeNavMenu()">X</button>
+            <!-- <button class="sidebar__close button" onclick="closeNavMenu()">X</button> -->
             <div class="sidebar__links">
+                <button class="sidebar__close button" onclick="closeNavMenu()">X</button>
                 <a href="#about" aria-label="home">Home</a>
                 <a href="#skills" aria-label="skills">Skills</a>
                 <a href="#projects" aria-label="projects">Projects</a>
@@ -76,23 +78,34 @@
         <section class="section projects" id="projects">
             <h2 class="center">Projects</h2>
             <section class="cards">
-                <div class="card selectable project">
+                <div class="card selectable project" id="flight_finder">
                     <h3 class="card__title">Flights Finder</h3>
                     <img src="./public/images/Flight_Finder.png" alt="Flights finder wbsite image" >
                     <div class="card__down">Down Arrow</div>
                 </div>
-                <div class="card selectable project">
+                <div class="card selectable project" id="book_library">
                     <h3 class="card__title">Book Library</h3>
                     <img src="./public/images/Book_Library.png" alt="Book library website image">
                     <div class="card__down">Down Arrow</div>
                 </div>
-                <div class="card selectable project">
+                <div class="card selectable project" id="beyond_stars">
                     <h3 class="card__title">Beyond Stars - Unity 3D</h3>
                     <img src="./public/images/Beyond_Star.png" alt="Mobile game cover image">
+                    <div class="card__down">Down Arrow</div>
                 </div>
                 <div class="description" id="description">
-                    <button class="card__close button" onclick="closeDescCard()">X</button>
-                    <div class="card__down">Down Arrow</div>
+
+                    <div>
+                        <div class="description__content">
+                            <button class="card__close button" onclick="closeDescCard()">X</button>
+                            <h2 id="description__title">Title</h2>
+                            <div class="project__content" id="project__content">
+                                <!-- max-width="560" max-height="315" -->
+                            </div>
+                            <p class="description__description">Some description about the project</p>
+                            <a class="description__link" href="###">Link to Github</a>
+                        </div>
+                    </div>
                 </div>
             </section>
         </section>
@@ -110,6 +123,7 @@
         <a rel="noopener" target="_blank" href="https://icons8.com/icon/39848/unity">Unity</a> icon by <a rel="noopener" target="_blank" href="https://icons8.com">Icons8</a>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>

@@ -33,6 +33,24 @@ for (let i = 0; i < selectableCard.length; i++)
 {
     selectableCard[i].addEventListener("click", function () {
 
+        // Check what content the card holds
+        // Add custom content to element
+        // $("video_link").prepend('<p>Hello World</p> ');
+        
+        // Use switch instead
+        var elementID = selectableCard[i].id;
+        if (elementID === "beyond_stars")
+        {
+            document.getElementById("description__title").innerHTML = "Beyond Stars";
+            document.getElementById("project__content").innerHTML = '<iframe id="embedded" src="https://www.youtube.com/embed/6Ch8jzS-pwI?si=qEk1APYJtd70zlot&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';   
+        } else if (elementID === "flight_finder") {
+            document.getElementById("description__title").innerHTML = "Flight Finder";
+            document.getElementById("project__content").innerHTML = '<p>Flight gallery here</P>';
+        } else if (elementID === "book_library") {
+            document.getElementById("description__title").innerHTML = "Books Library";
+            document.getElementById("project__content").innerHTML = '<p>book library gallery here</P>';
+        }
+
         // Check resolution, and open different description window when using small width screen
         if (window.innerWidth <= 846){
             // Remove classses, if previously a different screen size was used
@@ -64,6 +82,7 @@ function closeDescCard() {
             cardDescription.classList.add("up");
             descCardOpen = false;
         }
+        document.getElementById("embedded").remove();
     }
 };
 
