@@ -94,7 +94,6 @@ footer{
 }
 
 a{
-    color: white;
     font-size: 2rem;
     text-decoration: none;
     font-weight: bold;
@@ -104,9 +103,16 @@ a:hover, a:focus-visible{
     text-decoration: underline;
 }
 
+p{
+    font-size: clamp(1.0rem, 5.2vw, 1.3rem);;
+}
+
+h1, h2, h3, h4, a, p{
+    color: white;
+}
+
 h1, h2, h3, h4{
     margin-bottom: 20px;
-    color: white;
 }
 
 h1{
@@ -187,8 +193,23 @@ h4{
 /* || ABOUT  --------------------------------------------------------------------------------------*/
 .about{
     padding: var(--STANDARD_VER_PADDING);
-    min-height: 400px;
+    min-height: 300px;
     scroll-margin-top: 60px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.about p{
+    max-width: 600px;
+    /* width: 100%; */
+}
+
+.about button{
+    max-width: 100px;
 }
 /* || SKILLS  -------------------------------------------------------------------------------------*/
 .skills{
@@ -225,7 +246,30 @@ h4{
 .card{
     width: 30%;
     height: clamp(100px, 23vw, 300px);
+    height: auto;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 20px;
+    text-align: center;
+
+    gap: 10px;
+}
+
+.card__title {
+    /* min-height: clamp(40px, 5.0vw, 65px); */
+}
+
+.skills img{
+    /* max-height: 70px; */
+    height: 5em;
+}
+
+.card .card__down{
+    
 }
 
 .description{
@@ -318,8 +362,8 @@ h4{
 
     .card{
         /* height: 300px; */
-        height: 60vw;
-        width: 80%;
+        height: auto;
+        width: 70%;
     }
 
     header{
