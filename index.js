@@ -93,3 +93,33 @@ window.onresize = function () {
     cardDescription.classList.remove("screen_view");
     descCardOpen = false;
 };
+
+let slideIndexes = [1, 1, 1]
+let slideNames = ["slide-one", "slide-two", "slide-three"]
+showSlides(0, 2);
+showSlides(1, 1);
+showSlides(2, 1);
+
+
+function plusSlide(slideIndex, n) {
+    slideIndexes[slideIndex] = slideIndexes[slideIndex] + n;
+    showSlides(slideIndex, slideIndexes[slideIndex])
+}
+
+function showSlides(slideIndex, n) {
+    let i;
+    // let nextSlide = n;
+    let slides = document.getElementsByClassName(slideNames[slideIndex]);
+    if (n > slides.length) {
+        // slideIndex = 1
+        slideIndexes[slideIndex] = 1;
+    }
+    if (n < 1) {
+        slideIndexes[slideIndex] = slides.length
+    }
+    
+    for (i = 0; i < slides.length; i++){
+        slides[i].style.display = "none";
+    }
+    slides[slideIndexes[slideIndex] - 1].style.display = "block";
+}

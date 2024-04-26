@@ -85,7 +85,7 @@ header{
     box-shadow: 1px 1px 7px black;
 
     padding: var(--STANDARD_PADDING);
-    
+    z-index: 999;
 }
 
 footer{
@@ -249,8 +249,86 @@ h4{
 }
 
 .project img{
-    max-width: 70%;
+    /* max-width: 70%; */
     padding-bottom: 20px;
+}
+
+.slide-container{
+    /* max-width: 800px; */
+    max-width: 70%;
+    position: relative;
+    margin: auto;
+
+}
+
+.slides{
+    display: flex;
+
+    align-items: center;
+    align-content: center;
+}
+
+.slides{
+    display: none;
+}
+
+.slides img{
+    width: 100%;
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0 3px 3px 0;
+    -webkit-user-select: none;
+    user-select: none;
+} 
+
+.next{
+    right: 0;
+    border: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover{
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.slides__text{
+    color: while;
+    background: lightgray;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.slides__number{
+    color: while;
+    background: lightgray;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.face{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade{
+    from {opacity: .4;}
+    to {opacity: 1;}
 }
 
 .video-container{
