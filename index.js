@@ -123,3 +123,11 @@ function showSlides(slideIndex, n) {
     }
     slides[slideIndexes[slideIndex] - 1].style.display = "block";
 }
+
+let images = document.getElementsByClassName("slides");
+
+for (var i = 0; i < images.length; i++){
+    images[i].addEventListener("click", () => {
+        
+    })
+}

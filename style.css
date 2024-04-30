@@ -255,7 +255,7 @@ h4{
 
 .slide-container{
     /* max-width: 800px; */
-    max-width: 70%;
+    max-width: 90%;
     position: relative;
     margin: auto;
 
@@ -263,7 +263,6 @@ h4{
 
 .slides{
     display: flex;
-
     align-items: center;
     align-content: center;
 }
@@ -360,7 +359,6 @@ iframe{
     /* height: 315px; */
     padding-bottom: 15px;
 }
-
 
 .cards{
     display: flex;
