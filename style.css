@@ -91,7 +91,12 @@ header{
 footer{
     background: var(--HEADER_BG_COLOR);
     min-height: 100px;
+    display: flex;
+    flex-direction: column;
 }
+
+/* || HEADER  -------------------------------------------------------------------------------------*/
+
 
 a{
     font-size: 2rem;
@@ -104,7 +109,7 @@ a:hover, a:focus-visible{
 }
 
 p{
-    font-size: clamp(1.0rem, 5.2vw, 1.3rem);;
+    font-size: clamp(1.0rem, 5.2vw, 1.3rem);
 }
 
 h1, h2, h3, h4, a, p{
@@ -128,8 +133,14 @@ h3{
 }
 
 h4{
-
+    font-size: clamp(1.0rem, 5.2vw, 1.4rem);
 }
+
+.button{
+    min-width: 50px;
+    min-height: 50px;
+}
+
 
 /* || CUSTOM STYLES  ------------------------------------------------------------------------------*/
 
@@ -143,9 +154,28 @@ h4{
     display: none;
 }
 
-.button{
-    min-width: 50px;
-    min-height: 50px;
+/* || FOOTER  -------------------------------------------------------------------------------------*/
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: var(--STANDARD_PADDING);
+    gap: 15px;
+    padding-top: 15px;
+}
+
+.footer p, .footer a{
+    font-size: clamp(1.0rem, 5.2vw, 1.3rem);
+}
+
+.footer p{
+    color: grey
+}
+
+.footer__links{
+    display: flex;
+    gap: 5px;
 }
 
 /* || MAIN  ---------------------------------------------------------------------------------------*/
@@ -253,12 +283,30 @@ h4{
     padding-bottom: 20px;
 }
 
+.project .git__link{
+    font-size: clamp(1.0rem, 5.2vw, 1.3rem);
+}
+
+.project__description p{
+    max-width: 800px;
+    padding-bottom: 15px;
+}
+
+.project__description h4{
+    padding-bottom: 10px;
+}
+.project__description h4{
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.project 
 .slide-container{
     /* max-width: 800px; */
     max-width: 90%;
     position: relative;
     margin: auto;
-
+    /* padding-bottom: 20px; */
 }
 
 .slides{
@@ -281,7 +329,7 @@ h4{
     top: 50%;
     width: auto;
     margin-top: -22px;
-    padding: 16px;
+    padding: 12px;
     color: black;
     font-weight: bold;
     font-size: 18px;
@@ -302,20 +350,20 @@ h4{
 
 .slides__text{
     color: while;
-    background: lightgray;
-    font-size: 15px;
-    padding: 8px 12px;
+    background: hsla(0, 0%, 0%, 0.47);
+    font-size: clamp(0.8rem, 3.5vw, 1.0rem);
+    padding: 2px;
     position: absolute;
-    bottom: 15px;
+    bottom: 20px;
     width: 100%;
     text-align: center;
 }
 
 .slides__number{
     color: while;
-    background: lightgray;
-    font-size: 12px;
-    padding: 8px 12px;
+    background: hsla(0, 0%, 0%, 0.47);
+    font-size: clamp(8px, 3.5vw, 12px);
+    padding: clamp(0.6rem, 3.5vw, 0.8rem);
     position: absolute;
     top: 0;
 }
