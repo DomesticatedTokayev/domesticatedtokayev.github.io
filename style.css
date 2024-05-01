@@ -31,13 +31,22 @@ img{
     --PROJECT_DESC_BG_COLOR: #3e3e3e;
     --SIDEBAD_BG_COLOR: #2d2d2d;
 
-    /* STANDARD BORDERS */
+    /* STANDARD PADDING */
     --STANDARD_PADDING: 10px 10px;
     --STANDARD_VER_PADDING: 20px 0;
     --STANDARD_HOR_PADDING: 0px 10px;
+
     /* STANDARD BORDERS */
+    --STANDARD_BORDER: 2px rgba(255, 255, 255, 0.402) solid;
+    
+    /* STANDARD BORDERS_RADIUS */
+    --STANDARD_BORDER_RADIUS: 10px;
 
     /* STANDARD MARGINS */
+    --STANDARD_GAP: 15px;
+    
+    /* STANDARD GAP */
+
 }
 
 /* || UTILITY CLASSES  ----------------------------------------------------------------------------*/
@@ -53,11 +62,18 @@ img{
     text-align: center;
 }
 
-/* || GENERAL STYLES  -----------------------------------------------------------------------------*/
-html{
-
+.bold{
+    font-weight: bold;
 }
 
+
+.link{
+    border: var(--STANDARD_BORDER);
+    border-radius: 5px;
+    padding: 3px;
+}
+
+/* || GENERAL STYLES  -----------------------------------------------------------------------------*/
 body{
     background-color: var(--BODY_BG_COLOR);
 }
@@ -139,6 +155,14 @@ h4{
 .button{
     min-width: 50px;
     min-height: 50px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.icon{
+    pointer-events: none;
+    font-size: 40px;
 }
 
 
@@ -161,7 +185,7 @@ h4{
     justify-content: center;
     flex-wrap: wrap;
     padding: var(--STANDARD_PADDING);
-    gap: 15px;
+    gap: var(--STANDARD_GAP);
     padding-top: 15px;
 }
 
@@ -187,15 +211,6 @@ h4{
     padding: var(--STANDARD_HOR_PADDING);
 }
 
-.section{
-    /* background-color: hwb(0 100% 0% / 0.3); */
-
-}
-
-.section:nth-child(odd){
-    /* background: hwb(0 23% 77% / 0.3); */
-}
-
 /* || VECTICAL-NAVIGATION -------------------------------------------------------------------------*/
 .sidebar{
     min-width: 70%;
@@ -219,6 +234,7 @@ h4{
     flex-direction: column;
     align-items: end;
     padding: 10px;
+    gap: 20px;
 }
 
 .sidebar__close{
@@ -237,16 +253,19 @@ h4{
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    /* gap: var(--STANDARD_GAP); */
 }
 
 .about p{
     max-width: 600px;
     /* width: 100%; */
+    margin-bottom: var(--STANDARD_GAP);
 }
 
 .about button{
     max-width: 100px;
 }
+
 /* || SKILLS  -------------------------------------------------------------------------------------*/
 .skills{
     padding: var(--STANDARD_VER_PADDING);
@@ -276,6 +295,9 @@ h4{
     justify-content: start;
     align-items: center;
     padding: var(--STANDARD_PADDING);
+
+    border: var(--STANDARD_BORDER);
+    border-radius: var(--STANDARD_BORDER_RADIUS);
 }
 
 .project img{
@@ -283,9 +305,6 @@ h4{
     padding-bottom: 20px;
 }
 
-.project .git__link{
-    font-size: clamp(1.0rem, 5.2vw, 1.3rem);
-}
 
 .project__description p{
     max-width: 800px;
@@ -357,6 +376,9 @@ h4{
     bottom: 20px;
     width: 100%;
     text-align: center;
+
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
 }
 
 .slides__number{
@@ -382,6 +404,7 @@ h4{
     position: relative;
     overflow: hidden;
     width: 70%;
+    margin-bottom: 15px;
 }
 
 .video-container::after{
@@ -405,7 +428,8 @@ iframe{
     /* height:  calc((315px / 100) * 110); */
     /* width: 560px; */
     /* height: 315px; */
-    padding-bottom: 15px;
+    border: var(--STANDARD_BORDER);
+
 }
 
 .cards{
@@ -431,9 +455,11 @@ iframe{
     padding: 20px 20px;
     text-align: center;
 
-    gap: 10px;
-}
+    gap: var(--STANDARD_GAP);
 
+    border: var(--STANDARD_BORDER);
+    border-radius: var(--STANDARD_BORDER_RADIUS);
+}
 
 .skills img{
     /* max-height: 70px; */
@@ -531,6 +557,10 @@ iframe{
 /* || CONTACT  ------------------------------------------------------------------------------------*/
 .contact{
     min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--STANDARD_GAP);
 }
 
 /* || MEDIA  --------------------------------------------------------------------------------------*/

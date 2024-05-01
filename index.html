@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <header>
@@ -18,12 +19,12 @@
             </div>
         </div>
         <div class="vertical-navigation header-button">
-            <button class="button nav-button" onclick="openNavMenu()">|||</button>
+            <button class="button nav-button" onclick="openNavMenu()"><span class="icon material-symbols-outlined">menu</span></button>
         </div>
         <div class="sidebar hidden" id="sidebar"> 
             <!-- <button class="sidebar__close button" onclick="closeNavMenu()">X</button> -->
             <div class="sidebar__links">
-                <button class="sidebar__close button" onclick="closeNavMenu()">X</button>
+                <button class="sidebar__close button" onclick="closeNavMenu()"><span class="icon material-symbols-outlined">close</span></button>
                 <a href="#about" aria-label="home">Home</a>
                 <a href="#skills" aria-label="skills">Skills</a>
                 <a href="#projects" aria-label="projects">Projects</a>
@@ -37,7 +38,7 @@
             <h2 class="center">Welcoma, I'm Marko</h2>
             <p>I am learning and looking for work in software development. I've obtained skills to create both front-end and back-end services, and I am looking for new oppotunities to learn and improve.</p>
             <div>
-                <a rel="noopener" href="./public/documents/Marko Trembulak - CV.pdf" target="_blank">View CV</a>
+                <a class="link" rel="noopener" href="./public/documents/Marko Trembulak - CV.pdf" target="_blank">View CV</a>
             </div>
         </section>
         <section class="section skills" id="skills">
@@ -82,22 +83,18 @@
                     <h3 class="card__title">Flights Finder</h3>
                     <div class="slide-container">
                         <div class="slides fade slide-one">
-                            <!-- <div class="slides__number"><p>1 / 4</p></div> -->
                             <img src="./public/images/Flight_Finder.png" alt="" >
                             <div class="slides__text"><p>Image Text</p></div>
                         </div>
                         <div class="slides fade slide-one">
-                            <!-- <div class="slides__number"><p>2 / 4</p></div> -->
                             <img src="./public/images/Book_Library.png" alt="" >
                             <div class="slides__text"><p>Image Text</p></div>
                         </div>
                         <div class="slides fade slide-one">
-                            <!-- <div class="slides__number"><p>3 / 4</p></div> -->
                             <img src="./public/images/Flight_Finder.png" alt="" >
                             <div class="slides__text"><p>Image Text</p></div>
                         </div>
                         <div class="slides fade slide-one">
-                            <!-- <div class="slides__number"><p>4 / 4</p></div> -->
                             <img src="./public/images/Book_Library.png" alt="" >
                             <div class="slides__text"><p>Image Text</p></div>
                         </div>
@@ -105,33 +102,29 @@
                         <a class="next" onclick="plusSlide(0, 1)">&#10095</a>
                     </div>
                     <div class="project__description">
-                        <h4>back-end</h4>
+                        <h4>Back-End</h4>
                         <p>Description header</p>
                         <h4>Front-End</h4>
                         <p>Used React to create single-page website</p>
                     </div>
-                    <a class="git__link" href="#">Link to Github</a>
+                    <a class="link" href="#"><p>Link to Github</p></a>
                 </div>
                 <div class="project" id="book_library">
                     <h3 class="card__title">Book Library</h3>
                     <div class="slide-container">
                         <div class="slides fade slide-two">
-                            <!-- <div class="slides__number"><p>1 / 4</p></div> -->
                             <img src="./public/images/Flight_Finder.png" alt="" >
                             <div class="slides__text"><p>Image Text</p></div>
                         </div>
                         <div class="slides fade slide-two">
-                            <!-- <div class="slides__number"><p>2 / 4</p></div> -->
                             <img src="./public/images/Book_Library.png" alt="" >
                             <div class="slides__text"><p>Image Text</p></div>
                         </div>
                         <div class="slides fade slide-two">
-                            <!-- <div class="slides__number"><p>3 / 4</p></div> -->
                             <img src="./public/images/Flight_Finder.png" alt="" >
                             <div class="slides__text"><p>Image Text</p></div>
                         </div>
                         <div class="slides fade slide-two">
-                            <!-- <div class="slides__number"><p>4 / 4</p></div> -->
                             <img src="./public/images/Book_Library.png" alt="" >
                             <div class="slides__text"><p>Image Text</p></div>
                         </div>
@@ -142,29 +135,24 @@
                         <h4>Description title</h4>
                         <p>Description header</p>
                     </div>
-                    <a class="git__link" href="#">Link to Github</a>
+                    <a class="link" href="#"><p>Link to Github</p></a>
                 </div>
                 <div class="project" id="beyond_stars">
                     <h3 class="card__title">Beyond Stars - Unity 3D</h3>
-                    <!-- <img src="./public/images/Beyond_Star.png" alt="Mobile game cover image"> -->
                     <div class="slide-container">
                         <div class="slides fade slide-three">
-                            <!-- <div class="slides__number"><p>1 / 4</p></div> -->
                             <img src="./public/images/Flight_Finder.png" alt="" >
                             <div class="slides__text"><p>Image Text</p></div>
                         </div>
                         <div class="slides fade slide-three">
-                            <!-- <div class="slides__number"><p>2 / 4</p></div> -->
                             <img src="./public/images/Book_Library.png" alt="" >
                             <div class="slides__text"><p>Image Text</p></div>
                         </div>
                         <div class="slides fade slide-three">
-                            <!-- <div class="slides__number"><p>3 / 4</p></div> -->
                             <img src="./public/images/Flight_Finder.png" alt="" >
                             <div class="slides__text"><p>Image Text</p></div>
                         </div>
                         <div class="slides fade slide-three">
-                            <!-- <div class="slides__number"><p>4 / 4</p>4</div> -->
                             <img src="./public/images/Book_Library.png" alt="" >
                             <div class="slides__text"><p>Image Text</p></div>
                         </div>
@@ -178,12 +166,15 @@
                         <h4>Description title</h4>
                         <p>Description header</p>
                     </div>
-                    <a class="git__link" href="#">Link to Github</a>
+                    <a class="link" href="#"><p>Link to Github</p></a>
                 </div>
             </section>
         </section>
         <section class="section contact" id="contact">
             <h2 class="center">Contact Details</h2>
+            <p><span class="bold">Email:</span> markotrembulak@gmail.com</p>
+            <p><span class="bold">Mobile Number:</span> 07478222087</p>
+            <a class="link" rel="noopener" href="./public/documents/Marko Trembulak - CV.pdf" target="_blank"><p>View CV</p></a>
         </section>
     </main>
 
