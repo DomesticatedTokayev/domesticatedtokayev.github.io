@@ -30,6 +30,8 @@ img{
     --PROJECT_BG_COLOR: #4e4e4e;
     --PROJECT_DESC_BG_COLOR: #3e3e3e;
     --SIDEBAD_BG_COLOR: #2d2d2d;
+    --STANDARD_BORDER_COLOR: rgba(255, 255, 255, 0.402);
+    --STANDARD_TEXT_COLOR: rgba(255, 255, 255, 0.808);
 
     /* STANDARD PADDING */
     --STANDARD_PADDING: 10px 10px;
@@ -37,7 +39,7 @@ img{
     --STANDARD_HOR_PADDING: 0px 10px;
 
     /* STANDARD BORDERS */
-    --STANDARD_BORDER: 2px rgba(255, 255, 255, 0.402) solid;
+    --STANDARD_BORDER: 2px var(--STANDARD_BORDER_COLOR) solid;
     
     /* STANDARD BORDERS_RADIUS */
     --STANDARD_BORDER_RADIUS: 10px;
@@ -68,9 +70,13 @@ img{
 
 
 .link{
-    border: var(--STANDARD_BORDER);
+    /* text-decoration: underline; */
     border-radius: 5px;
     padding: 3px;
+}
+
+.grey-text{
+    color: var(--STANDARD_TEXT_COLOR);
 }
 
 /* || GENERAL STYLES  -----------------------------------------------------------------------------*/
@@ -280,6 +286,7 @@ h4{
     padding: var(--STANDARD_VER_PADDING);
     /* min-height: 1200px; */
     scroll-margin-top: 60px;
+    margin-bottom: 20px;
 }
 
 .project{
@@ -300,15 +307,13 @@ h4{
     border-radius: var(--STANDARD_BORDER_RADIUS);
 }
 
-.project img{
-    /* max-width: 70%; */
-    padding-bottom: 20px;
+.project__description{
+        max-width: 89%;
 }
 
-
 .project__description p{
-    max-width: 800px;
     padding-bottom: 15px;
+    text-align: center;
 }
 
 .project__description h4{
@@ -332,10 +337,15 @@ h4{
     display: flex;
     align-items: center;
     align-content: center;
+    /* border: solid 2px white; */
+    /* border: var(--STANDARD_BORDER); */
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .slides{
     display: none;
+    margin-bottom: 20px;
 }
 
 .slides img{
@@ -349,6 +359,7 @@ h4{
     width: auto;
     margin-top: -22px;
     padding: 12px;
+    margin-inline: 10px;
     color: black;
     font-weight: bold;
     font-size: 18px;
@@ -369,16 +380,19 @@ h4{
 
 .slides__text{
     color: while;
-    background: hsla(0, 0%, 0%, 0.47);
+    background: rgba(41, 41, 41, 0.47);
     font-size: clamp(0.8rem, 3.5vw, 1.0rem);
-    padding: 2px;
-    position: absolute;
-    bottom: 20px;
+    padding: 5px;
+    /* margin: 5px; */
+    /* position: absolute; */
+    /* bottom: 30px; */
     width: 100%;
     text-align: center;
 
     /* border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px; */
+    /* border: solid 3px red; */
+    /* border-bottom: 2px var(--STANDARD_BORDER_COLOR) solid; */
 }
 
 .slides__number{
@@ -421,15 +435,8 @@ h4{
     height: 100%;
 }
 
-/* 5.6 */
-/* 3.15 */
 iframe{
-    /* width: calc((560px / 100) * 110); */
-    /* height:  calc((315px / 100) * 110); */
-    /* width: 560px; */
-    /* height: 315px; */
     border: var(--STANDARD_BORDER);
-
 }
 
 .cards{
